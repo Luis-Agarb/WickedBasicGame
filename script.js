@@ -114,7 +114,7 @@ function showResult() {
     secretHat.style.top = "10px";
     secretHat.style.right = "10px";
     secretHat.style.cursor = "pointer";
-    ecretHat.style.backgroundImage = "url('images/hat.png')"
+    secretHat.style.backgroundImage = "url('images/hat.png')"
     secretHat.title = "Clique para magia";
     document.body.appendChild(secretHat);
 
