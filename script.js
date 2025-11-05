@@ -46,7 +46,7 @@ const phrases = [
 
 // Eventos
 startButton.addEventListener('click', startQuiz);
-restartButton.addEventListener('click', startQuiz);
+restartButton.addEventListener('click', atualizarPagina);
 
 function startQuiz() {
     startButton.classList.add('hidden');
@@ -56,6 +56,10 @@ function startQuiz() {
     score = { Elphaba: 0, Glinda: 0, Fiyero: 0 };
     showQuestion();
 }
+
+function atualizarPagina() {
+    location.reload();
+  }
 
 function showQuestion() {
     resetState();
@@ -90,7 +94,7 @@ function showResult() {
 
     const winner = Object.keys(score).reduce((a, b) => score[a] > score[b] ? a : b);
     resultText.innerText = `Você é ${winner}!`;
-    resultImage.src = `images/${winner.toLowerCase()}.png`;
+    resultImage.src = `images/${winner.toLowerCase()}.jpg`;
 
     // Easter-egg: clique na imagem mostra frase aleatória
     resultImage.addEventListener('click', () => {
